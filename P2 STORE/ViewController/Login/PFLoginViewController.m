@@ -208,7 +208,7 @@ NSString *password;
 }
 
 - (void)PFThaweeyontApi:(id)sender loginWithFacebookTokenResponse:(NSDictionary *)response {
-    //NSLog(@"FacebookResponse %@",response);
+    NSLog(@"FacebookResponse %@",response);
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:[response objectForKey:@"access_token"] forKey:@"access_token"];

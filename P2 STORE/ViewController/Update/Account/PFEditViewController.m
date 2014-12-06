@@ -39,9 +39,10 @@ NSString *close_bt;
     [popup setCornerRadius:7.0f];
     
     // Navbar setup
-    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:237.0f/255.0f green:28.0f/255.0f blue:36.0f/255.0f alpha:1.0f]];
+    [[self.navController navigationBar] setBarTintColor:[UIColor colorWithRed:242.0f/255.0f green:242.0f/255.0f blue:242.0f/255.0f alpha:1.0f]];
     
-    self.navController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
+    [[self.navController navigationBar] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
+                                                                 [UIColor colorWithRed:0.0/255.0 green:0.0/255.0 blue:0.0/255.0 alpha:1.0], NSForegroundColorAttributeName, nil]];
     
     [[self.navController navigationBar] setTranslucent:YES];
     [self.view addSubview:self.navController.view];

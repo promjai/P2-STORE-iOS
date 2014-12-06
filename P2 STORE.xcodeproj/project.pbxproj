@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		810FD4141A32C6C500A78550 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 810FD4131A32C6C500A78550 /* FacebookSDK.framework */; };
 		811371A21A2D655D007EEF61 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 811371A11A2D655D007EEF61 /* main.m */; };
 		811371A51A2D655D007EEF61 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 811371A41A2D655D007EEF61 /* AppDelegate.m */; };
 		811371AD1A2D655D007EEF61 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 811371AC1A2D655D007EEF61 /* Images.xcassets */; };
@@ -315,6 +314,7 @@
 		818628461A2EBCD400FFF347 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 818628451A2EBCD400FFF347 /* MapKit.framework */; };
 		818628481A2EBCDB00FFF347 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 818628471A2EBCDB00FFF347 /* QuartzCore.framework */; };
 		8186284A1A2EBCE200FFF347 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 818628491A2EBCE200FFF347 /* UIKit.framework */; };
+		81FB3D281A32F47B0041A015 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81FB3D271A32F47B0041A015 /* FacebookSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -328,7 +328,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		810FD4131A32C6C500A78550 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = FW/FacebookSDK.framework; sourceTree = "<group>"; };
 		8113719C1A2D655D007EEF61 /* P2 STORE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "P2 STORE.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		811371A01A2D655D007EEF61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		811371A11A2D655D007EEF61 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -753,6 +752,7 @@
 		818628471A2EBCDB00FFF347 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		818628491A2EBCE200FFF347 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		81B7D2D31A30113300040EA6 /* P2 STORE-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "P2 STORE-Prefix.pch"; sourceTree = "<group>"; };
+		81FB3D271A32F47B0041A015 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = FW/FacebookSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -761,7 +761,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8186284A1A2EBCE200FFF347 /* UIKit.framework in Frameworks */,
-				810FD4141A32C6C500A78550 /* FacebookSDK.framework in Frameworks */,
+				81FB3D281A32F47B0041A015 /* FacebookSDK.framework in Frameworks */,
 				818628481A2EBCDB00FFF347 /* QuartzCore.framework in Frameworks */,
 				818628461A2EBCD400FFF347 /* MapKit.framework in Frameworks */,
 				818628441A2EBCCC00FFF347 /* ImageIO.framework in Frameworks */,
@@ -1824,7 +1824,7 @@
 		818628381A2EBC6E00FFF347 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				810FD4131A32C6C500A78550 /* FacebookSDK.framework */,
+				81FB3D271A32F47B0041A015 /* FacebookSDK.framework */,
 				818628491A2EBCE200FFF347 /* UIKit.framework */,
 				818628471A2EBCDB00FFF347 /* QuartzCore.framework */,
 				818628451A2EBCD400FFF347 /* MapKit.framework */,
@@ -2350,6 +2350,8 @@
 					STORE/FW,
 					"$(PROJECT_DIR)/P2",
 					STORE/FW,
+					"$(PROJECT_DIR)/P2",
+					STORE/FW,
 				);
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2369,6 +2371,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Phee Puthaprasert (Q8MZLL79Y4)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/P2",
+					STORE/FW,
 					"$(PROJECT_DIR)/P2",
 					STORE/FW,
 					"$(PROJECT_DIR)/P2",

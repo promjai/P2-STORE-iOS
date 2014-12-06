@@ -26,4 +26,5 @@
 #define RGBA(r, g, b, a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 #define IS_OS_8_OR_LATER ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
 
-#define API_URL @"http://thaweeyont-api.pla2app.com/"
+//#define API_URL @"http://thaweeyont-api.pla2app.com/"
+#define API_URL @"http://p2store-api.pla2app.com/"
