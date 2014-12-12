@@ -39,10 +39,10 @@ NSString *removeBreckets;
     [popup setCornerRadius:7.0f];
     
     
-    self.ThaweeyontApi = [[PFThaweeyontApi alloc] init];
-    self.ThaweeyontApi.delegate = self;
+    self.Api = [[PFApi alloc] init];
+    self.Api.delegate = self;
     
-    if (![[self.ThaweeyontApi getLanguage] isEqualToString:@"TH"]) {
+    if (![[self.Api getLanguage] isEqualToString:@"TH"]) {
         self.navigationItem.title = @"Setting";
         self.notificationLabel.text = @"Notification setting";
         self.newupdateLabel.text = @"News Update";
@@ -76,7 +76,7 @@ NSString *removeBreckets;
     self.obj = [[NSDictionary alloc] init];
     self.rowCount = [[NSString alloc] init];
     
-    [self.ThaweeyontApi me];
+    [self.Api me];
 }
 
 - (void)didReceiveMemoryWarning
@@ -88,7 +88,7 @@ NSString *removeBreckets;
     return UIInterfaceOrientationMaskPortrait;
 }
 
-- (void)PFThaweeyontApi:(id)sender meResponse:(NSDictionary *)response {
+- (void)PFApi:(id)sender meResponse:(NSDictionary *)response {
     self.obj = response;
     //NSLog(@"Me %@",response);
     
@@ -108,11 +108,11 @@ NSString *removeBreckets;
                               self.thumUser.image = [UIImage imageWithData:imgData];
                           }];
     
-    [self.ThaweeyontApi getUserSetting];
+    [self.Api getUserSetting];
     
 }
 
-- (void)PFThaweeyontApi:(id)sender meErrorResponse:(NSString *)errorResponse {
+- (void)PFApi:(id)sender meErrorResponse:(NSString *)errorResponse {
     NSLog(@"%@",errorResponse);
     
     [self.waitView removeFromSuperview];
@@ -128,10 +128,10 @@ NSString *removeBreckets;
                               self.thumUser.image = [UIImage imageWithData:imgData];
                           }];
     
-    [self.ThaweeyontApi getUserSetting];
+    [self.Api getUserSetting];
 }
 
-- (void)PFThaweeyontApi:(id)sender getUserSettingResponse:(NSDictionary *)response {
+- (void)PFApi:(id)sender getUserSettingResponse:(NSDictionary *)response {
     //NSLog(@"getUserSetting %@",response);
     
     [self.settingOffline setObject:response forKey:@"settingOffline"];
@@ -153,7 +153,7 @@ NSString *removeBreckets;
     
 }
 
-- (void)PFThaweeyontApi:(id)sender getUserSettingErrorResponse:(NSString *)errorResponse {
+- (void)PFApi:(id)sender getUserSettingErrorResponse:(NSString *)errorResponse {
     NSLog(@"%@",errorResponse);
     
     if ([[[self.settingOffline objectForKey:@"settingOffline"] objectForKey:@"notify_update"] intValue] == 1) {
@@ -172,9 +172,9 @@ NSString *removeBreckets;
 - (IBAction)switchNewsonoff:(id)sender{
     
     if(self.switchNews.on) {
-        [self.ThaweeyontApi settingNews:@"1"];
+        [self.Api settingNews:@"1"];
     } else {
-        [self.ThaweeyontApi settingNews:@"0"];
+        [self.Api settingNews:@"0"];
     }
     
 }
@@ -182,9 +182,9 @@ NSString *removeBreckets;
 - (IBAction)switchMessageonoff:(id)sender{
     
     if(self.switchMessage.on) {
-        [self.ThaweeyontApi settingMessage:@"1"];
+        [self.Api settingMessage:@"1"];
     } else {
-        [self.ThaweeyontApi settingMessage:@"0"];
+        [self.Api settingMessage:@"0"];
     }
     
 }
@@ -238,7 +238,7 @@ NSString *removeBreckets;
 
 - (IBAction)logoutTapped:(id)sender {
     [FBSession.activeSession closeAndClearTokenInformation];
-    [self.ThaweeyontApi logOut];
+    [self.Api logOut];
     [self.navigationController popViewControllerAnimated:YES];
     
 }

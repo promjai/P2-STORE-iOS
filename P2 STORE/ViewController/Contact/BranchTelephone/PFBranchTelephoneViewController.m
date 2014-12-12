@@ -35,10 +35,10 @@ BOOL refreshDataTel;
     
     self.navigationItem.title = @"หมายเลขภายใน";
     
-    self.ThaweeyontApi = [[PFThaweeyontApi alloc] init];
-    self.ThaweeyontApi.delegate = self;
+    self.Api = [[PFApi alloc] init];
+    self.Api.delegate = self;
     
-    [self.ThaweeyontApi getBranchTelephone:[self.obj objectForKey:@"id"]];
+    [self.Api getBranchTelephone:[self.obj objectForKey:@"id"]];
     
     loadTel = NO;
     noDataTel = NO;
@@ -47,10 +47,7 @@ BOOL refreshDataTel;
     self.arrObj = [[NSMutableArray alloc] init];
     
     [self.view addSubview:self.waitView];
-    
-    CALayer *popup = [self.popupwaitView layer];
-    [popup setMasksToBounds:YES];
-    [popup setCornerRadius:7.0f];
+    [self startSpin];
     
     UIView *hv = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
     self.tableView.tableHeaderView = hv;
@@ -66,7 +63,65 @@ BOOL refreshDataTel;
     return UIInterfaceOrientationMaskPortrait;
 }
 
-- (void)PFThaweeyontApi:(id)sender getBranchTelephoneResponse:(NSDictionary *)response{
+- (void)startSpin
+{
+    
+    if (!self.popupProgressBar) {
+        
+        if(IS_WIDESCREEN) {
+            self.popupProgressBar = [[UIImageView alloc] initWithFrame:CGRectMake(145, 269, 30, 30)];
+            self.popupProgressBar.image = [UIImage imageNamed:@"ic_loading"];
+            [self.waitView addSubview:self.popupProgressBar];
+        } else {
+            self.popupProgressBar = [[UIImageView alloc] initWithFrame:CGRectMake(145, 225, 30, 30)];
+            self.popupProgressBar.image = [UIImage imageNamed:@"ic_loading"];
+            [self.waitView addSubview:self.popupProgressBar];
+        }
+        
+    }
+    
+    [CATransaction begin];
+    [CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions];
+    CGRect frame = [self.popupProgressBar frame];
+    self.popupProgressBar.layer.anchorPoint = CGPointMake(0.5, 0.5);
+    self.popupProgressBar.layer.position = CGPointMake(frame.origin.x + 0.5 * frame.size.width, frame.origin.y + 0.5 * frame.size.height);
+    [CATransaction commit];
+    
+    [CATransaction begin];
+    [CATransaction setValue:(id)kCFBooleanFalse forKey:kCATransactionDisableActions];
+    [CATransaction setValue:[NSNumber numberWithFloat:1.0] forKey:kCATransactionAnimationDuration];
+    
+    CABasicAnimation *animation;
+    animation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+    animation.fromValue = [NSNumber numberWithFloat:0.0];
+    animation.toValue = [NSNumber numberWithFloat:2 * M_PI];
+    animation.timingFunction = [CAMediaTimingFunction functionWithName: kCAMediaTimingFunctionLinear];
+    animation.delegate = self;
+    [self.popupProgressBar.layer addAnimation:animation forKey:@"rotationAnimation"];
+    
+    [CATransaction commit];
+}
+
+- (void)animationDidStart:(CAAnimation *)anim
+{
+    
+}
+
+/* Called when the animation either completes its active duration or
+ * is removed from the object it is attached to (i.e. the layer). 'flag'
+ * is true if the animation reached the end of its active duration
+ * without being removed. */
+- (void)animationDidStop:(CAAnimation *)theAnimation finished:(BOOL)finished
+{
+    if (finished)
+    {
+        
+        [self startSpin];
+        
+    }
+}
+
+- (void)PFApi:(id)sender getBranchTelephoneResponse:(NSDictionary *)response{
     //NSLog(@"%@",response);
     
     [self.waitView removeFromSuperview];
@@ -95,7 +150,7 @@ BOOL refreshDataTel;
     [self.tableView reloadData];
 }
 
-- (void)PFThaweeyontApi:(id)sender getBranchTelephoneErrorResponse:(NSString *)errorResponse {
+- (void)PFApi:(id)sender getBranchTelephoneErrorResponse:(NSString *)errorResponse {
     NSLog(@"%@",errorResponse);
     
     [self.waitView removeFromSuperview];

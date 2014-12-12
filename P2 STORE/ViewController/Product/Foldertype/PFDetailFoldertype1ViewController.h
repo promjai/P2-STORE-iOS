@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "DLImageLoader.h"
 
-#import "PFThaweeyontApi.h"
+#import "PFApi.h"
 
 #import "PFCatalogCell.h"
 #import "PFFoldertypeCell.h"
@@ -28,17 +28,16 @@
 @interface PFDetailFoldertype1ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (assign, nonatomic) id delegate;
-@property (strong, nonatomic) PFThaweeyontApi *ThaweeyontApi;
+@property (strong, nonatomic) PFApi *Api;
 @property (strong, nonatomic) NSMutableArray *arrObj;
 @property (strong, nonatomic) NSDictionary *obj;
 
 @property NSUserDefaults *foldertype1Offline;
 
-@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *act;
-@property (strong, nonatomic) IBOutlet UILabel *loadLabel;
-
 @property (strong, nonatomic) IBOutlet UIView *waitView;
-@property (strong, nonatomic) IBOutlet UIView *popupwaitView;
+@property (strong, nonatomic) UIImageView *popupProgressBar;
+@property (strong, nonatomic) UIImageView *progressBar;
+@property (strong, nonatomic) NSString *statusProgress;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 

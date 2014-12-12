@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "DLImageLoader.h"
 
-#import "PFThaweeyontApi.h"
+#import "PFApi.h"
 
 #import "PFPromotionCell.h"
 #import "PFCatalogCell.h"
@@ -31,7 +31,7 @@
 @interface PFProductViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
 
 @property (assign, nonatomic) id delegate;
-@property (strong, nonatomic) PFThaweeyontApi *ThaweeyontApi;
+@property (strong, nonatomic) PFApi *Api;
 
 @property (strong, nonatomic) NSMutableArray *arrObjPromotion;
 @property (strong, nonatomic) NSDictionary *objPromotion;
@@ -47,13 +47,13 @@
 @property (strong, nonatomic) IBOutlet UINavigationItem *navItem;
 
 @property (strong, nonatomic) IBOutlet UIView *waitView;
-@property (strong, nonatomic) IBOutlet UIView *popupwaitView;
+@property (strong, nonatomic) UIImageView *popupProgressBar;
+@property (strong, nonatomic) UIImageView *progressBar;
+@property (strong, nonatomic) NSString *statusProgress;
 
 @property (strong, nonatomic) IBOutlet UIView *NoInternetView;
 @property (strong, nonatomic) NSString *checkinternet;
 
-@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *act;
-@property (strong, nonatomic) IBOutlet UILabel *loadLabel;
 
 @property (strong, nonatomic) IBOutlet UISegmentedControl *segmented;
 @property (strong, nonatomic) NSString *checksegmented;

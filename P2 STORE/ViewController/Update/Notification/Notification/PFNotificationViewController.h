@@ -10,7 +10,7 @@
 #import "AFNetworking.h"
 #import "PFNotificationCell.h"
 
-#import "PFThaweeyontApi.h"
+#import "PFApi.h"
 
 #import "PFUpdateDetailViewController.h"
 #import "PFPromotionDetailViewController.h"
@@ -28,7 +28,7 @@
 
 @property AFHTTPRequestOperationManager *manager;
 @property (assign, nonatomic) id delegate;
-@property (strong, nonatomic) PFThaweeyontApi *ThaweeyontApi;
+@property (strong, nonatomic) PFApi *Api;
 
 @property NSUserDefaults *notifyOffline;
 

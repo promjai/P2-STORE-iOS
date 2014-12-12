@@ -29,8 +29,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.ThaweeyontApi = [[PFThaweeyontApi alloc] init];
-    self.ThaweeyontApi.delegate = self;
+    self.Api = [[PFApi alloc] init];
+    self.Api.delegate = self;
     
     self.navigationItem.title = [self.obj objectForKey:@"name"];
     
@@ -45,7 +45,7 @@
     [scrollView addGestureRecognizer:singleTap];
     
     NSString *id = [NSString stringWithFormat:@"%@",[self.obj objectForKey:@"id"]];
-    [self.ThaweeyontApi getCatalogById:id];
+    [self.Api getCatalogById:id];
     
     self.name.text = [self.obj objectForKey:@"name"];
     self.detail.text = [self.obj objectForKey:@"detail"];
@@ -194,7 +194,7 @@
     imageView.contentMode = UIViewContentModeScaleAspectFill;
 }
 
-- (void)PFThaweeyontApi:(id)sender getCatalogByIdResponse:(NSDictionary *)response {
+- (void)PFApi:(id)sender getCatalogByIdResponse:(NSDictionary *)response {
     //NSLog(@"%@",response);
     
     [self.catalogDetailOffline removeObjectForKey:@"catalogDetailArray"];
@@ -341,7 +341,7 @@
 
 }
 
-- (void)PFThaweeyontApi:(id)sender getCatalogByIdErrorResponse:(NSString *)errorResponse {
+- (void)PFApi:(id)sender getCatalogByIdErrorResponse:(NSString *)errorResponse {
     NSLog(@"%@",errorResponse);
     
     NSString *length = [NSString stringWithFormat:@"%@",[[self.catalogDetailOffline objectForKey:[self.obj objectForKey:@"id"]] objectForKey:@"length"]];

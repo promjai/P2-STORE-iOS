@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "DLImageLoader.h"
 
-#import "PFThaweeyontApi.h"
+#import "PFApi.h"
 
 #import "PFCouponCell.h"
 #import "PFCouponDetailViewController.h"
@@ -25,7 +25,7 @@
 @interface PFCouponViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
 
 @property (assign, nonatomic) id delegate;
-@property (strong, nonatomic) PFThaweeyontApi *ThaweeyontApi;
+@property (strong, nonatomic) PFApi *Api;
 @property (strong, nonatomic) NSMutableArray *arrObj;
 @property (strong, nonatomic) NSDictionary *obj;
 
@@ -36,13 +36,12 @@
 @property (strong, nonatomic) IBOutlet UINavigationItem *navItem;
 
 @property (strong, nonatomic) IBOutlet UIView *waitView;
-@property (strong, nonatomic) IBOutlet UIView *popupwaitView;
+@property (strong, nonatomic) UIImageView *popupProgressBar;
+@property (strong, nonatomic) UIImageView *progressBar;
+@property (strong, nonatomic) NSString *statusProgress;
 
 @property (strong, nonatomic) IBOutlet UIView *NoInternetView;
 @property (strong, nonatomic) NSString *checkinternet;
-
-@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *act;
-@property (strong, nonatomic) IBOutlet UILabel *loadLabel;
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 

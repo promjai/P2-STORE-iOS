@@ -30,10 +30,10 @@ NSString *password;
 {
     [super viewDidLoad];
     
-    self.ThaweeyontApi = [[PFThaweeyontApi alloc] init];
-    self.ThaweeyontApi.delegate = self;
+    self.Api = [[PFApi alloc] init];
+    self.Api.delegate = self;
     
-    if (![[self.ThaweeyontApi getLanguage] isEqualToString:@"TH"]) {
+    if (![[self.Api getLanguage] isEqualToString:@"TH"]) {
         
         self.usernameTextField.placeholder = @"User name";
         self.passwordTextField.placeholder = @"Password";
@@ -152,7 +152,7 @@ NSString *password;
     
     NSLog(@"facebook %@",user);
     
-    [self.ThaweeyontApi loginWithFacebookToken:fbAccessToken];
+    [self.Api loginWithFacebookToken:fbAccessToken];
     
 }
 
@@ -207,7 +207,7 @@ NSString *password;
     }
 }
 
-- (void)PFThaweeyontApi:(id)sender loginWithFacebookTokenResponse:(NSDictionary *)response {
+- (void)PFApi:(id)sender loginWithFacebookTokenResponse:(NSDictionary *)response {
     NSLog(@"FacebookResponse %@",response);
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -232,7 +232,7 @@ NSString *password;
     }
     
 }
-- (void)PFThaweeyontApi:(id)sender LoginWithFacebookTokenErrorResponse:(NSString *)errorResponse {
+- (void)PFApi:(id)sender LoginWithFacebookTokenErrorResponse:(NSString *)errorResponse {
     NSLog(@"%@",errorResponse);
     
     [[[UIAlertView alloc] initWithTitle:@"Login failed"
@@ -243,7 +243,7 @@ NSString *password;
 }
 
 - (IBAction)loginwithemailTapped:(id)sender {
-    [self.ThaweeyontApi loginWithUsername:self.usernameTextField.text password:self.passwordTextField.text];
+    [self.Api loginWithUsername:self.usernameTextField.text password:self.passwordTextField.text];
 }
 
 - (IBAction)signupTapped:(id)sender {
@@ -264,7 +264,7 @@ NSString *password;
     [self.view addSubview:self.scrollView];
 }
 
-- (void)PFThaweeyontApi:(id)sender loginWithUsernameResponse:(NSDictionary *)response {
+- (void)PFApi:(id)sender loginWithUsernameResponse:(NSDictionary *)response {
     //NSLog(@"%@",response);
     
     if ([[[response objectForKey:@"error"] objectForKey:@"type"] isEqualToString:@"Main\\CTL\\Exception\\NeedParameterException"] || [[[response objectForKey:@"error"] objectForKey:@"type"] isEqualToString:@"NotAuthorized"] || [[[response objectForKey:@"error"] objectForKey:@"type"] isEqualToString:@"Error"]) {
@@ -299,7 +299,7 @@ NSString *password;
     
 }
 
-- (void)PFThaweeyontApi:(id)sender loginWithUsernameErrorResponse:(NSString *)errorResponse {
+- (void)PFApi:(id)sender loginWithUsernameErrorResponse:(NSString *)errorResponse {
     NSLog(@"%@",errorResponse);
     
     [[[UIAlertView alloc] initWithTitle:@"Login failed"
@@ -367,7 +367,7 @@ NSString *password;
 
 - (IBAction)genderTapped:(id)sender {
     [self hideKeyboard];
-    if (![[self.ThaweeyontApi getLanguage] isEqualToString:@"TH"]) {
+    if (![[self.Api getLanguage] isEqualToString:@"TH"]) {
         
         UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"ทวียนต์!"
                                                           message:@"Select gender."
@@ -409,7 +409,7 @@ NSString *password;
     password = self.passwordRegisTextField.text;
     
     if ( [self.usernameRegisTextField.text isEqualToString:@""]) {
-        if (![[self.ThaweeyontApi getLanguage] isEqualToString:@"TH"]) {
+        if (![[self.Api getLanguage] isEqualToString:@"TH"]) {
             UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"ทวียนต์!"
                                                               message:@"Username Incorrect"
                                                              delegate:nil
@@ -426,7 +426,7 @@ NSString *password;
         }
         return;
     } else if ( [self.emailRegisTextField.text isEqualToString:@""]) {
-        if (![[self.ThaweeyontApi getLanguage] isEqualToString:@"TH"]) {
+        if (![[self.Api getLanguage] isEqualToString:@"TH"]) {
             UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"ทวียนต์!"
                                                               message:@"Email Incorrect"
                                                              delegate:nil
@@ -443,7 +443,7 @@ NSString *password;
         }
         return;
     } else if ( ![self validateEmail:[self.emailRegisTextField text]] ) {
-        if (![[self.ThaweeyontApi getLanguage] isEqualToString:@"TH"]) {
+        if (![[self.Api getLanguage] isEqualToString:@"TH"]) {
             UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"ทวียนต์!"
                                                               message:@"Enter a valid email address"
                                                              delegate:nil
@@ -460,7 +460,7 @@ NSString *password;
         }
         return;
     } else if ( [self.passwordRegisTextField.text isEqualToString:@""]) {
-        if (![[self.ThaweeyontApi getLanguage] isEqualToString:@"TH"]) {
+        if (![[self.Api getLanguage] isEqualToString:@"TH"]) {
             UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"ทวียนต์!"
                                                               message:@"Password Incorrect"
                                                              delegate:nil
@@ -477,7 +477,7 @@ NSString *password;
         }
         return;
     } else if (![self.passwordRegisTextField.text isEqualToString:self.confirmpasswordRegisTextField.text]) {
-        if (![[self.ThaweeyontApi getLanguage] isEqualToString:@"TH"]) {
+        if (![[self.Api getLanguage] isEqualToString:@"TH"]) {
             UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"ทวียนต์!"
                                                               message:@"And password do not match."
                                                              delegate:nil
@@ -494,12 +494,12 @@ NSString *password;
         }
         return;
     } else {
-        [self.ThaweeyontApi registerWithUsername:self.usernameRegisTextField.text email:self.emailRegisTextField.text password:self.passwordRegisTextField.text gender:self.genderRegisTextField.text birth_date:self.birthdayRegisTextField.text];
+        [self.Api registerWithUsername:self.usernameRegisTextField.text email:self.emailRegisTextField.text password:self.passwordRegisTextField.text gender:self.genderRegisTextField.text birth_date:self.birthdayRegisTextField.text];
     }
 
 }
 
-- (void)PFThaweeyontApi:(id)sender registerWithUsernameResponse:(NSDictionary *)response {
+- (void)PFApi:(id)sender registerWithUsernameResponse:(NSDictionary *)response {
     NSLog(@"%@",response);
     
     if ([response objectForKey:@"error"] != nil ) {
@@ -511,12 +511,12 @@ NSString *password;
     } else {
         
         [self hideKeyboard];
-        [self.ThaweeyontApi loginWithUsername:[response objectForKey:@"username"] password:password];
+        [self.Api loginWithUsername:[response objectForKey:@"username"] password:password];
         
     }
 }
 
-- (void)PFThaweeyontApi:(id)sender registerWithUsernameErrorResponse:(NSString *)errorResponse {
+- (void)PFApi:(id)sender registerWithUsernameErrorResponse:(NSString *)errorResponse {
     NSLog(@"error%@",errorResponse);
     
     [[[UIAlertView alloc] initWithTitle:@"Signup failed"

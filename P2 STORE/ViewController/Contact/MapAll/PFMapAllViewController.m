@@ -28,10 +28,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.ThaweeyontApi = [[PFThaweeyontApi alloc] init];
-    self.ThaweeyontApi.delegate = self;
+    self.Api = [[PFApi alloc] init];
+    self.Api.delegate = self;
     
-    if (![[self.ThaweeyontApi getLanguage] isEqualToString:@"TH"]) {
+    if (![[self.Api getLanguage] isEqualToString:@"TH"]) {
         self.navigationItem.title = @"Map";
     } else {
         self.navigationItem.title = @"แผนที่";
@@ -40,7 +40,7 @@
     self.arrObj = [[NSMutableArray alloc] init];
     self.obj = [[NSDictionary alloc] init];
     
-    [self.ThaweeyontApi getContactBranches];
+    [self.Api getContactBranches];
     
     self.allmapView.delegate = self;
     self.allmapView.showsUserLocation = YES;
@@ -66,7 +66,7 @@
     return UIInterfaceOrientationMaskPortrait;
 }
 
-- (void)PFThaweeyontApi:(id)sender getContactBranchesResponse:(NSDictionary *)response {
+- (void)PFApi:(id)sender getContactBranchesResponse:(NSDictionary *)response {
     //NSLog(@"contactBranch %@",response);
     
     for (int i=0; i < [[response objectForKey:@"data"] count]; i++) {
@@ -95,7 +95,7 @@
     }
 }
 
-- (void)PFThaweeyontApi:(id)sender getContactBranchesErrorResponse:(NSString *)errorResponse {
+- (void)PFApi:(id)sender getContactBranchesErrorResponse:(NSString *)errorResponse {
     NSLog(@"%@",errorResponse);
 }
 
@@ -146,7 +146,7 @@
 
 - (void)PFBranchDetailViewControllerBack {
     
-    if (![[self.ThaweeyontApi getLanguage] isEqualToString:@"TH"]) {
+    if (![[self.Api getLanguage] isEqualToString:@"TH"]) {
         self.navigationItem.title = @"Map";
     } else {
         self.navigationItem.title = @"แผนที่";

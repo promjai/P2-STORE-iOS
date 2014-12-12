@@ -10,7 +10,7 @@
 #import "DLImageLoader.h"
 #import <FacebookSDK/FacebookSDK.h>
 
-#import "PFThaweeyontApi.h"
+#import "PFApi.h"
 
 #import "PFAccountCell.h"
 #import "PFEditViewController.h"
@@ -26,7 +26,7 @@
 @interface PFAccountViewController : UIViewController < UITextViewDelegate >
 
 @property (assign, nonatomic) id delegate;
-@property (strong, nonatomic) PFThaweeyontApi *ThaweeyontApi;
+@property (strong, nonatomic) PFApi *Api;
 @property (strong, nonatomic) NSDictionary *obj;
 
 @property NSUserDefaults *meOffline;

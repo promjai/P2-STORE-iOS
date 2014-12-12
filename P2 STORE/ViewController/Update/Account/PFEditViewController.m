@@ -47,10 +47,10 @@ NSString *close_bt;
     [[self.navController navigationBar] setTranslucent:YES];
     [self.view addSubview:self.navController.view];
     
-    self.ThaweeyontApi = [[PFThaweeyontApi alloc] init];
-    self.ThaweeyontApi.delegate = self;
+    self.Api = [[PFApi alloc] init];
+    self.Api.delegate = self;
     
-    if (![[self.ThaweeyontApi getLanguage] isEqualToString:@"TH"]) {
+    if (![[self.Api getLanguage] isEqualToString:@"TH"]) {
         self.navItem.title = @"Profile Setting";
         self.displaynameLabel.text = @"Display Name";
         self.changepasswordLabel.text = @"Change Password";
@@ -84,7 +84,7 @@ NSString *close_bt;
     
     self.objEdit = [[NSDictionary alloc] init];
     
-    [self.ThaweeyontApi me];
+    [self.Api me];
 }
 
 - (void)didReceiveMemoryWarning
@@ -100,7 +100,7 @@ NSString *close_bt;
     [self dismissModalViewControllerAnimated:YES];
 }
 
-- (void)PFThaweeyontApi:(id)sender meResponse:(NSDictionary *)response {
+- (void)PFApi:(id)sender meResponse:(NSDictionary *)response {
     self.objEdit = response;
     //NSLog(@"Me %@",response);
     
@@ -137,7 +137,7 @@ NSString *close_bt;
     }
 }
 
-- (void)PFThaweeyontApi:(id)sender meErrorResponse:(NSString *)errorResponse {
+- (void)PFApi:(id)sender meErrorResponse:(NSString *)errorResponse {
     NSLog(@"%@",errorResponse);
     
     [self.waitView removeFromSuperview];
@@ -172,11 +172,11 @@ NSString *close_bt;
     }
 }
 
-- (void)PFThaweeyontApi:(id)sender getUserSettingResponse:(NSDictionary *)response {
+- (void)PFApi:(id)sender getUserSettingResponse:(NSDictionary *)response {
     //NSLog(@"settingUser %@",response);
 }
 
-- (void)PFThaweeyontApi:(id)sender getUserSettingErrorResponse:(NSString *)errorResponse {
+- (void)PFApi:(id)sender getUserSettingErrorResponse:(NSString *)errorResponse {
     NSLog(@"%@",errorResponse);
 }
 
@@ -394,7 +394,7 @@ NSString *close_bt;
     
     NSData *imageData = UIImageJPEGRepresentation(image, 0.5);
     NSString *base64String = [self base64forData:imageData];
-    [self.ThaweeyontApi userPictureUpload:base64String];
+    [self.Api userPictureUpload:base64String];
 
     [picker dismissViewControllerAnimated:YES completion:^{
         self.thumUser.image = image;
