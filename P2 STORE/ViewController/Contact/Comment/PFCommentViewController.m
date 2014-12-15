@@ -1,6 +1,6 @@
 //
 //  PFCommentViewController.m
-//  thaweeyont
+//  P2 STORE
 //
 //  Created by Pariwat on 11/1/14.
 //  Copyright (c) 2014 Platwo fusion. All rights reserved.

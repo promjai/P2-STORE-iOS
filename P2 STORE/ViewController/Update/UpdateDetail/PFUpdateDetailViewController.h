@@ -1,6 +1,6 @@
 //
 //  PFUpdateDetailViewController.h
-//  Thaweeyont
+//  P2 STORE
 //
 //  Created by Promjai on 10/27/2557 BE.
 //  Copyright (c) 2557 Platwo fusion. All rights reserved.
