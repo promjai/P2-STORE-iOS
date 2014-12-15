@@ -46,10 +46,11 @@
 @property (strong, nonatomic) IBOutlet UINavigationBar *navBar;
 @property (strong, nonatomic) IBOutlet UINavigationItem *navItem;
 
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+
 @property (strong, nonatomic) IBOutlet UIView *waitView;
 @property (strong, nonatomic) UIImageView *popupProgressBar;
-@property (strong, nonatomic) UIImageView *progressBar;
-@property (strong, nonatomic) NSString *statusProgress;
+@property (strong, nonatomic) UIRefreshControl *refreshControl;
 
 @property (strong, nonatomic) IBOutlet UIView *NoInternetView;
 @property (strong, nonatomic) NSString *checkinternet;
@@ -57,14 +58,7 @@
 
 @property (strong, nonatomic) IBOutlet UISegmentedControl *segmented;
 @property (strong, nonatomic) NSString *checksegmented;
-
-@property (strong, nonatomic) IBOutlet UIView *mainView;
-
-@property (strong, nonatomic) IBOutlet UIView *promotionView;
-@property (strong, nonatomic) IBOutlet UITableView *promotiontableView;
-
-@property (strong, nonatomic) IBOutlet UIView *catalogView;
-@property (strong, nonatomic) IBOutlet UITableView *catalogtableView;
+@property (strong, nonatomic) NSString *checkstatus;
 
 @property (strong, nonatomic) NSString *paging;
 

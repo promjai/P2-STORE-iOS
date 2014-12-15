@@ -37,8 +37,7 @@
 
 @property (strong, nonatomic) IBOutlet UIView *waitView;
 @property (strong, nonatomic) UIImageView *popupProgressBar;
-@property (strong, nonatomic) UIImageView *progressBar;
-@property (strong, nonatomic) NSString *statusProgress;
+@property (strong, nonatomic) UIRefreshControl *refreshControl;
 
 @property (strong, nonatomic) IBOutlet UIView *NoInternetView;
 @property (strong, nonatomic) NSString *checkinternet;

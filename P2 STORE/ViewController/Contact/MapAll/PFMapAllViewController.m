@@ -24,6 +24,37 @@
     return self;
 }
 
+- (MKAnnotationView *)mapView:(MKMapView *)_mapView viewForAnnotation:(id <MKAnnotation>)annotation
+{
+    static NSString *AnnotationViewID = @"PFMapAllViewController";
+    
+    MKAnnotationView *annotationView = (MKAnnotationView *)[self.allmapView dequeueReusableAnnotationViewWithIdentifier:AnnotationViewID];
+    
+    if (annotationView == nil)
+    {
+        annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:AnnotationViewID];
+    }
+    
+    annotationView.canShowCallout = YES;
+    UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    [rightButton addTarget:self action:@selector(getDistance) forControlEvents:UIControlEventTouchUpInside];
+    annotationView.rightCalloutAccessoryView = rightButton;
+    
+    /*
+     UIImageView *myCustomImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ic_location.png"]];
+     annotationView.leftCalloutAccessoryView = myCustomImage;
+     */
+    if (annotation == self.allmapView.userLocation) {
+        return nil;
+    } else {
+        annotationView.image = [UIImage imageNamed:@"pin_map.png"];
+    }
+    //add any image which you want to show on map instead of red pins
+    annotationView.annotation = annotation;
+    
+    return annotationView;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -89,7 +120,7 @@
         point.title = getname;
         
         [self.allmapView addAnnotation:point];
-        [self.allmapView setCenterCoordinate:location zoomLevel:5 animated:NO];
+        [self.allmapView setCenterCoordinate:location zoomLevel:6 animated:NO];
         //
         
     }
@@ -119,12 +150,10 @@
         
     }
     
-    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(singleTap:)];
-    [view addGestureRecognizer:singleTap];
 }
 
-- (void)singleTap:(UITapGestureRecognizer *)gesture
-{
+- (void)getDistance {
+    
     PFBranchDetailViewController *branchesView = [[PFBranchDetailViewController alloc] init];
     
     if(IS_WIDESCREEN) {

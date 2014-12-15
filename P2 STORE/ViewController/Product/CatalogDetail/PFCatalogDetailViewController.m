@@ -34,6 +34,9 @@
     
     self.navigationItem.title = [self.obj objectForKey:@"name"];
     
+    [self.view addSubview:self.waitView];
+    [self startSpin];
+    
     UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"icon_share"] style:UIBarButtonItemStyleDone target:self action:@selector(share)];
     self.navigationItem.rightBarButtonItem = rightButton;
 
@@ -73,6 +76,60 @@
 
 -(NSUInteger)supportedInterfaceOrientations{
     return UIInterfaceOrientationMaskPortrait;
+}
+
+- (void)startSpin
+{
+    
+    if (!self.popupProgressBar) {
+        
+        if(IS_WIDESCREEN) {
+            self.popupProgressBar = [[UIImageView alloc] initWithFrame:CGRectMake(145, 269, 30, 30)];
+            self.popupProgressBar.image = [UIImage imageNamed:@"ic_loading"];
+            [self.waitView addSubview:self.popupProgressBar];
+        } else {
+            self.popupProgressBar = [[UIImageView alloc] initWithFrame:CGRectMake(145, 225, 30, 30)];
+            self.popupProgressBar.image = [UIImage imageNamed:@"ic_loading"];
+            [self.waitView addSubview:self.popupProgressBar];
+        }
+        
+    }
+    
+    [CATransaction begin];
+    [CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions];
+    CGRect frame = [self.popupProgressBar frame];
+    self.popupProgressBar.layer.anchorPoint = CGPointMake(0.5, 0.5);
+    self.popupProgressBar.layer.position = CGPointMake(frame.origin.x + 0.5 * frame.size.width, frame.origin.y + 0.5 * frame.size.height);
+    [CATransaction commit];
+    
+    [CATransaction begin];
+    [CATransaction setValue:(id)kCFBooleanFalse forKey:kCATransactionDisableActions];
+    [CATransaction setValue:[NSNumber numberWithFloat:1.0] forKey:kCATransactionAnimationDuration];
+    
+    CABasicAnimation *animation;
+    animation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+    animation.fromValue = [NSNumber numberWithFloat:0.0];
+    animation.toValue = [NSNumber numberWithFloat:2 * M_PI];
+    animation.timingFunction = [CAMediaTimingFunction functionWithName: kCAMediaTimingFunctionLinear];
+    animation.delegate = self;
+    [self.popupProgressBar.layer addAnimation:animation forKey:@"rotationAnimation"];
+    
+    [CATransaction commit];
+}
+
+- (void)animationDidStart:(CAAnimation *)anim
+{
+    
+}
+
+- (void)animationDidStop:(CAAnimation *)theAnimation finished:(BOOL)finished
+{
+    if (finished)
+    {
+        
+        [self startSpin];
+        
+    }
 }
 
 - (void)share {
@@ -196,6 +253,8 @@
 
 - (void)PFApi:(id)sender getCatalogByIdResponse:(NSDictionary *)response {
     //NSLog(@"%@",response);
+    
+    [self.waitView removeFromSuperview];
     
     [self.catalogDetailOffline removeObjectForKey:@"catalogDetailArray"];
     
@@ -343,6 +402,8 @@
 
 - (void)PFApi:(id)sender getCatalogByIdErrorResponse:(NSString *)errorResponse {
     NSLog(@"%@",errorResponse);
+    
+    [self.waitView removeFromSuperview];
     
     NSString *length = [NSString stringWithFormat:@"%@",[[self.catalogDetailOffline objectForKey:[self.obj objectForKey:@"id"]] objectForKey:@"length"]];
     int num = length.intValue;

@@ -40,6 +40,9 @@
 
 @property NSUserDefaults *catalogDetailOffline;
 
+@property (strong, nonatomic) IBOutlet UIView *waitView;
+@property (strong, nonatomic) UIImageView *popupProgressBar;
+
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @property (strong, nonatomic) IBOutlet UIView *headerView;

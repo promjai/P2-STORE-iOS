@@ -28,7 +28,7 @@
 
 @property NSUserDefaults *contactOffline;
 
-@property (strong, nonatomic) UIImageView *progressBar;
+@property (strong, nonatomic) UIRefreshControl *refreshControl;
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 

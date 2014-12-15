@@ -11,9 +11,12 @@
 		811371A51A2D655D007EEF61 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 811371A41A2D655D007EEF61 /* AppDelegate.m */; };
 		811371AD1A2D655D007EEF61 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 811371AC1A2D655D007EEF61 /* Images.xcassets */; };
 		811371BC1A2D655D007EEF61 /* P2_STORETests.m in Sources */ = {isa = PBXBuildFile; fileRef = 811371BB1A2D655D007EEF61 /* P2_STORETests.m */; };
+		812236541A3E8494005EE0C2 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 812236531A3E8494005EE0C2 /* FacebookSDK.framework */; };
+		812236581A3E9087005EE0C2 /* pin_map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 812236561A3E9087005EE0C2 /* pin_map@2x.png */; };
+		812236591A3E9087005EE0C2 /* pin_map@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 812236571A3E9087005EE0C2 /* pin_map@3x.png */; };
+		8122365B1A3E9654005EE0C2 /* PFProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8122365A1A3E9654005EE0C2 /* PFProductViewController.xib */; };
 		813663191A2EB6B000EEB43D /* TabBarItemButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 813663161A2EB6B000EEB43D /* TabBarItemButton.m */; };
 		8136631A1A2EB6B000EEB43D /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 813663181A2EB6B000EEB43D /* TabBarViewController.m */; };
-		8138A3D81A36B17900570A13 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8138A3D71A36B17900570A13 /* FacebookSDK.framework */; };
 		8138A3DB1A36B1FA00570A13 /* ic_loading@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8138A3D91A36B1FA00570A13 /* ic_loading@2x.png */; };
 		8138A3DC1A36B1FA00570A13 /* ic_loading@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8138A3DA1A36B1FA00570A13 /* ic_loading@3x.png */; };
 		8138A3DE1A36DA4600570A13 /* PFMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8138A3DD1A36DA4600570A13 /* PFMessageViewController.xib */; };
@@ -245,7 +248,6 @@
 		818627F51A2EBB5400FFF347 /* PFDetailFoldertypeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 818627321A2EBB5400FFF347 /* PFDetailFoldertypeViewController.xib */; };
 		818627F61A2EBB5400FFF347 /* PFDetailFoldertypeViewController_Wide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 818627331A2EBB5400FFF347 /* PFDetailFoldertypeViewController_Wide.xib */; };
 		818627F71A2EBB5400FFF347 /* PFProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 818627361A2EBB5400FFF347 /* PFProductViewController.m */; };
-		818627F81A2EBB5400FFF347 /* PFProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 818627371A2EBB5400FFF347 /* PFProductViewController.xib */; };
 		818627F91A2EBB5400FFF347 /* PFProductViewController_Wide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 818627381A2EBB5400FFF347 /* PFProductViewController_Wide.xib */; };
 		818627FA1A2EBB5400FFF347 /* PFPromotionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8186273B1A2EBB5400FFF347 /* PFPromotionDetailViewController.m */; };
 		818627FB1A2EBB5400FFF347 /* PFPromotionDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8186273C1A2EBB5400FFF347 /* PFPromotionDetailViewController.xib */; };
@@ -340,11 +342,14 @@
 		811371B51A2D655D007EEF61 /* P2 STORETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "P2 STORETests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		811371BA1A2D655D007EEF61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		811371BB1A2D655D007EEF61 /* P2_STORETests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = P2_STORETests.m; sourceTree = "<group>"; };
+		812236531A3E8494005EE0C2 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = FW/FacebookSDK.framework; sourceTree = "<group>"; };
+		812236561A3E9087005EE0C2 /* pin_map@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pin_map@2x.png"; sourceTree = "<group>"; };
+		812236571A3E9087005EE0C2 /* pin_map@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pin_map@3x.png"; sourceTree = "<group>"; };
+		8122365A1A3E9654005EE0C2 /* PFProductViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFProductViewController.xib; sourceTree = "<group>"; };
 		813663151A2EB6B000EEB43D /* TabBarItemButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarItemButton.h; sourceTree = "<group>"; };
 		813663161A2EB6B000EEB43D /* TabBarItemButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarItemButton.m; sourceTree = "<group>"; };
 		813663171A2EB6B000EEB43D /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
 		813663181A2EB6B000EEB43D /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
-		8138A3D71A36B17900570A13 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = FW/FacebookSDK.framework; sourceTree = "<group>"; };
 		8138A3D91A36B1FA00570A13 /* ic_loading@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_loading@2x.png"; sourceTree = "<group>"; };
 		8138A3DA1A36B1FA00570A13 /* ic_loading@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_loading@3x.png"; sourceTree = "<group>"; };
 		8138A3DD1A36DA4600570A13 /* PFMessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFMessageViewController.xib; sourceTree = "<group>"; };
@@ -673,7 +678,6 @@
 		818627331A2EBB5400FFF347 /* PFDetailFoldertypeViewController_Wide.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFDetailFoldertypeViewController_Wide.xib; sourceTree = "<group>"; };
 		818627351A2EBB5400FFF347 /* PFProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFProductViewController.h; sourceTree = "<group>"; };
 		818627361A2EBB5400FFF347 /* PFProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFProductViewController.m; sourceTree = "<group>"; };
-		818627371A2EBB5400FFF347 /* PFProductViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFProductViewController.xib; sourceTree = "<group>"; };
 		818627381A2EBB5400FFF347 /* PFProductViewController_Wide.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFProductViewController_Wide.xib; sourceTree = "<group>"; };
 		8186273A1A2EBB5400FFF347 /* PFPromotionDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFPromotionDetailViewController.h; sourceTree = "<group>"; };
 		8186273B1A2EBB5400FFF347 /* PFPromotionDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFPromotionDetailViewController.m; sourceTree = "<group>"; };
@@ -767,7 +771,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8186284A1A2EBCE200FFF347 /* UIKit.framework in Frameworks */,
-				8138A3D81A36B17900570A13 /* FacebookSDK.framework in Frameworks */,
+				812236541A3E8494005EE0C2 /* FacebookSDK.framework in Frameworks */,
 				818628481A2EBCDB00FFF347 /* QuartzCore.framework in Frameworks */,
 				818628461A2EBCD400FFF347 /* MapKit.framework in Frameworks */,
 				818628441A2EBCCC00FFF347 /* ImageIO.framework in Frameworks */,
@@ -861,6 +865,15 @@
 				8186269F1A2EBB5400FFF347 /* Contact */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		812236551A3E8F75005EE0C2 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				812236561A3E9087005EE0C2 /* pin_map@2x.png */,
+				812236571A3E9087005EE0C2 /* pin_map@3x.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		813663141A2EB6B000EEB43D /* Tabbar */ = {
@@ -1445,6 +1458,7 @@
 		818626E11A2EBB5400FFF347 /* MapAll */ = {
 			isa = PBXGroup;
 			children = (
+				812236551A3E8F75005EE0C2 /* Images */,
 				818626E21A2EBB5400FFF347 /* PFMapAllViewController.h */,
 				818626E31A2EBB5400FFF347 /* PFMapAllViewController.m */,
 				818626E41A2EBB5400FFF347 /* PFMapAllViewController.xib */,
@@ -1639,8 +1653,8 @@
 			children = (
 				818627351A2EBB5400FFF347 /* PFProductViewController.h */,
 				818627361A2EBB5400FFF347 /* PFProductViewController.m */,
-				818627371A2EBB5400FFF347 /* PFProductViewController.xib */,
 				818627381A2EBB5400FFF347 /* PFProductViewController_Wide.xib */,
+				8122365A1A3E9654005EE0C2 /* PFProductViewController.xib */,
 			);
 			path = Product;
 			sourceTree = "<group>";
@@ -1833,7 +1847,7 @@
 		818628381A2EBC6E00FFF347 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8138A3D71A36B17900570A13 /* FacebookSDK.framework */,
+				812236531A3E8494005EE0C2 /* FacebookSDK.framework */,
 				818628491A2EBCE200FFF347 /* UIKit.framework */,
 				818628471A2EBCDB00FFF347 /* QuartzCore.framework */,
 				818628451A2EBCD400FFF347 /* MapKit.framework */,
@@ -1934,7 +1948,6 @@
 				8186281E1A2EBB5400FFF347 /* PFNotificationCell.xib in Resources */,
 				8186269E1A2EBB2F00FFF347 /* icon_share@2x.png in Resources */,
 				818627C71A2EBB5400FFF347 /* PFWebViewController_Wide.xib in Resources */,
-				818627F81A2EBB5400FFF347 /* PFProductViewController.xib in Resources */,
 				8138A3DB1A36B1FA00570A13 /* ic_loading@2x.png in Resources */,
 				818627951A2EBB5400FFF347 /* PFBranchesCell.xib in Resources */,
 				818627EA1A2EBB5400FFF347 /* PFCatalogDetailViewController_Wide.xib in Resources */,
@@ -1944,6 +1957,7 @@
 				818627F61A2EBB5400FFF347 /* PFDetailFoldertypeViewController_Wide.xib in Resources */,
 				818628261A2EBB5400FFF347 /* NotBoxNoReadIp4.png in Resources */,
 				818627C31A2EBB5400FFF347 /* icon_reload.png in Resources */,
+				812236581A3E9087005EE0C2 /* pin_map@2x.png in Resources */,
 				818627BB1A2EBB5400FFF347 /* PFContactViewController.xib in Resources */,
 				818627D01A2EBB5400FFF347 /* bt_used@3x.png in Resources */,
 				8186266F1A2EBB2F00FFF347 /* en_update_on.png in Resources */,
@@ -1958,8 +1972,10 @@
 				818628291A2EBB5400FFF347 /* NotBoxReadedIp4.png in Resources */,
 				818628091A2EBB5400FFF347 /* ic_mail@2x.png in Resources */,
 				818626751A2EBB2F00FFF347 /* th_product_on.png in Resources */,
+				812236591A3E9087005EE0C2 /* pin_map@3x.png in Resources */,
 				818627E71A2EBB5400FFF347 /* PFLoginViewController.xib in Resources */,
 				818626861A2EBB2F00FFF347 /* th_update_off@2x.png in Resources */,
+				8122365B1A3E9654005EE0C2 /* PFProductViewController.xib in Resources */,
 				818627B01A2EBB5400FFF347 /* ic_numbers@2x.png in Resources */,
 				818627991A2EBB5400FFF347 /* PFBranchesViewController.xib in Resources */,
 				8186267D1A2EBB2F00FFF347 /* en_product_on@2x.png in Resources */,
@@ -2374,6 +2390,14 @@
 					STORE/FW,
 					"$(PROJECT_DIR)/P2",
 					STORE/FW,
+					"$(PROJECT_DIR)/P2",
+					STORE/FW,
+					"$(PROJECT_DIR)/P2",
+					STORE/FW,
+					"$(PROJECT_DIR)/P2",
+					STORE/FW,
+					"$(PROJECT_DIR)/P2",
+					STORE/FW,
 				);
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2393,6 +2417,14 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Phee Puthaprasert (Q8MZLL79Y4)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/P2",
+					STORE/FW,
+					"$(PROJECT_DIR)/P2",
+					STORE/FW,
+					"$(PROJECT_DIR)/P2",
+					STORE/FW,
+					"$(PROJECT_DIR)/P2",
+					STORE/FW,
 					"$(PROJECT_DIR)/P2",
 					STORE/FW,
 					"$(PROJECT_DIR)/P2",

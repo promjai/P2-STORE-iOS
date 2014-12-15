@@ -36,8 +36,7 @@
 
 @property (strong, nonatomic) IBOutlet UIView *waitView;
 @property (strong, nonatomic) UIImageView *popupProgressBar;
-@property (strong, nonatomic) UIImageView *progressBar;
-@property (strong, nonatomic) NSString *statusProgress;
+@property (strong, nonatomic) UIRefreshControl *refreshControl;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
