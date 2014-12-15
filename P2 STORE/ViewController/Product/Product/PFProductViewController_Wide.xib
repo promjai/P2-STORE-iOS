@@ -10,6 +10,7 @@
                 <outlet property="navBar" destination="znE-1F-R8F" id="aE5-qU-7ax"/>
                 <outlet property="navController" destination="Z4v-0Q-4cS" id="4L1-Xz-Xec"/>
                 <outlet property="navItem" destination="PUx-s9-lhR" id="YaS-iy-zJv"/>
+                <outlet property="popupWaitView" destination="QZB-mf-m8p" id="oym-ca-U4a"/>
                 <outlet property="segmented" destination="wJj-vl-Az4" id="Chb-vY-IWX"/>
                 <outlet property="tableView" destination="DWc-Od-c0R" id="tYp-qE-9Lb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -20,6 +21,12 @@
         <view contentMode="scaleToFill" id="QSq-eU-1Pz">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QZB-mf-m8p">
+                    <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                    <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+            </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <nil key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>

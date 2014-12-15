@@ -98,13 +98,13 @@ NSTimer *timmer;
     if (!self.popupProgressBar) {
         
         if(IS_WIDESCREEN) {
-            self.popupProgressBar = [[UIImageView alloc] initWithFrame:CGRectMake(145, 269, 30, 30)];
+            self.popupProgressBar = [[UIImageView alloc] initWithFrame:CGRectMake(145, 205, 30, 30)];
             self.popupProgressBar.image = [UIImage imageNamed:@"ic_loading"];
-            [self.waitView addSubview:self.popupProgressBar];
+            [self.popupWaitView addSubview:self.popupProgressBar];
         } else {
-            self.popupProgressBar = [[UIImageView alloc] initWithFrame:CGRectMake(145, 225, 30, 30)];
+            self.popupProgressBar = [[UIImageView alloc] initWithFrame:CGRectMake(145, 161, 30, 30)];
             self.popupProgressBar.image = [UIImage imageNamed:@"ic_loading"];
-            [self.waitView addSubview:self.popupProgressBar];
+            [self.popupWaitView addSubview:self.popupProgressBar];
         }
         
     }

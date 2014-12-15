@@ -175,6 +175,7 @@ NSTimer *timmer;
         [self.tableView reloadData];
         [self.couponOffline setObject:[response objectForKey:@"last_updated"] forKey:@"coupon_updated"];
     }
+    
 }
 
 - (void)PFApi:(id)sender getCouponErrorResponse:(NSString *)errorResponse {
@@ -206,6 +207,7 @@ NSTimer *timmer;
         [self.tableView reloadData];
         [self.couponOffline setObject:[[self.couponOffline objectForKey:@"couponArray"] objectForKey:@"last_updated"] forKey:@"coupon_updated"];
     }
+    
 }
 
 - (void)refresh:(UIRefreshControl *)refreshControl {
