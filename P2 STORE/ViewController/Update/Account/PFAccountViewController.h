@@ -33,7 +33,7 @@
 @property NSUserDefaults *settingOffline;
 
 @property (strong, nonatomic) IBOutlet UIView *waitView;
-@property (strong, nonatomic) IBOutlet UIView *popupwaitView;
+@property (strong, nonatomic) UIImageView *popupProgressBar;
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 

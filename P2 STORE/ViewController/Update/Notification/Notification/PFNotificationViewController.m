@@ -375,18 +375,38 @@ BOOL refreshDataNoti;
 
 - (void)PFUpdateDetailViewControllerBack {
     [self.tableView reloadData];
+    if (![[self.Api getLanguage] isEqualToString:@"TH"]) {
+        self.navigationItem.title = @"Notification";
+    } else {
+        self.navigationItem.title = @"การแจ้งเตือน";
+    }
 }
 
 - (void)PFPromotionDetailViewControllerBack {
     [self.tableView reloadData];
+    if (![[self.Api getLanguage] isEqualToString:@"TH"]) {
+        self.navigationItem.title = @"Notification";
+    } else {
+        self.navigationItem.title = @"การแจ้งเตือน";
+    }
 }
 
 - (void)PFCouponDetailViewControllerBack {
     [self.tableView reloadData];
+    if (![[self.Api getLanguage] isEqualToString:@"TH"]) {
+        self.navigationItem.title = @"Notification";
+    } else {
+        self.navigationItem.title = @"การแจ้งเตือน";
+    }
 }
 
 - (void)PFMessageViewControllerBack {
     [self.tableView reloadData];
+    if (![[self.Api getLanguage] isEqualToString:@"TH"]) {
+        self.navigationItem.title = @"Notification";
+    } else {
+        self.navigationItem.title = @"การแจ้งเตือน";
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
