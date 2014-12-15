@@ -338,11 +338,13 @@ NSTimer *timmer;
     
     if ([self.checksegmented isEqualToString:@"0"]) {
         
+        refreshDataProduct = YES;
         [self.Api getPromotion:@"15" link:@"NO"];
         self.checkstatus = @"notrefresh";
         
     } else {
 
+        refreshDataProduct = YES;
         [self.Api getCatalog:@"15" link:@"NO"];
         self.checkstatus = @"notrefresh";
         

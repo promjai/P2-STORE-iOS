@@ -361,6 +361,7 @@ NSTimer *timmer;
 
 - (void)refresh:(UIRefreshControl *)refreshControl {
     
+    refreshDataFeed = YES;
     [self.Api getFeed:@"15" link:@"NO"];
     
 }

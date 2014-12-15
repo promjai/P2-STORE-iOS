@@ -212,6 +212,7 @@ NSTimer *timmer;
 
 - (void)refresh:(UIRefreshControl *)refreshControl {
     
+    refreshDataCoupon = YES;
     [self.Api getCoupon:@"15" link:@"NO"];
     
 }
@@ -301,7 +302,7 @@ NSTimer *timmer;
 - (void)PFCouponDetailViewControllerBack {
     
     [self.delegate ShowTabbar];
-    [self viewDidLoad];
+    [self.tableView reloadData];
     if (![[self.Api getLanguage] isEqualToString:@"TH"]) {
         self.navItem.title = @"Coupon";
     } else {

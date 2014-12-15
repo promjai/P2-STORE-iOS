@@ -67,6 +67,7 @@ BOOL refreshDataBranch;
 
 - (void)refresh:(UIRefreshControl *)refreshControl {
     
+    refreshDataBranch = YES;
     [self.Api getContactBranches];
     
 }
