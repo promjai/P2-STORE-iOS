@@ -28,7 +28,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-            <point key="canvasLocation" x="169" y="335"/>
+            <point key="canvasLocation" x="-14" y="332"/>
         </view>
         <navigationController definesPresentationContext="YES" id="gH1-B8-GHu">
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -59,7 +59,7 @@
                     <navigationItem key="navigationItem" id="iPy-7L-U08"/>
                 </viewController>
             </viewControllers>
-            <point key="canvasLocation" x="537" y="335"/>
+            <point key="canvasLocation" x="721" y="332"/>
         </navigationController>
         <view alpha="0.75" contentMode="scaleToFill" id="xKt-hQ-24m">
             <rect key="frame" x="0.0" y="0.0" width="320" height="32"/>

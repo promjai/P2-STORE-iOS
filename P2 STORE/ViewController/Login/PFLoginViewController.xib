@@ -245,7 +245,7 @@
         <image name="bt_login_fb.png" width="260" height="45"/>
         <image name="bt_signup.png" width="130" height="45"/>
         <image name="ic_close.png" width="30" height="30"/>
-        <image name="logo.png" width="35" height="35"/>
+        <image name="logo.png" width="70" height="70"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
