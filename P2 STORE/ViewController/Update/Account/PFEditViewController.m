@@ -93,6 +93,10 @@ NSString *close_bt;
     return UIInterfaceOrientationMaskPortrait;
 }
 
+-(void)close {
+    [self dismissModalViewControllerAnimated:YES];
+}
+
 - (void)startSpin
 {
     if (!self.popupProgressBar) {
@@ -138,16 +142,11 @@ NSString *close_bt;
 
 - (void)animationDidStop:(CAAnimation *)theAnimation finished:(BOOL)finished
 {
-    if (finished)
-    {
-        
+    if (finished) {
         [self startSpin];
-        
+    } else {
+        [self startSpin];
     }
-}
-
--(void)close {
-    [self dismissModalViewControllerAnimated:YES];
 }
 
 - (void)PFApi:(id)sender meResponse:(NSDictionary *)response {
@@ -188,7 +187,7 @@ NSString *close_bt;
 }
 
 - (void)PFApi:(id)sender meErrorResponse:(NSString *)errorResponse {
-    NSLog(@"%@",errorResponse);
+    //NSLog(@"%@",errorResponse);
     
     [self.waitView removeFromSuperview];
     
@@ -227,7 +226,7 @@ NSString *close_bt;
 }
 
 - (void)PFApi:(id)sender getUserSettingErrorResponse:(NSString *)errorResponse {
-    NSLog(@"%@",errorResponse);
+    //NSLog(@"%@",errorResponse);
 }
 
 - (IBAction)displaynameTapped:(id)sender{
@@ -384,8 +383,6 @@ NSString *close_bt;
 
 - (void)useCameraRoll
 {
-    [self.view addSubview:self.waitView];
-    
     [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:242.0f/255.0f green:242.0f/255.0f blue:242.0f/255.0f alpha:1.0f]];
     
     [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
@@ -445,6 +442,8 @@ NSString *close_bt;
     NSData *imageData = UIImageJPEGRepresentation(image, 0.5);
     NSString *base64String = [self base64forData:imageData];
     [self.Api userPictureUpload:base64String];
+    
+    [self.view addSubview:self.waitView];
 
     [picker dismissViewControllerAnimated:YES completion:^{
         self.thumUser.image = image;
