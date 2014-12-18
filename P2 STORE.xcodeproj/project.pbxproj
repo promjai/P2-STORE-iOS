@@ -19,6 +19,7 @@
 		8138A3DB1A36B1FA00570A13 /* ic_loading@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8138A3D91A36B1FA00570A13 /* ic_loading@2x.png */; };
 		8138A3DC1A36B1FA00570A13 /* ic_loading@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8138A3DA1A36B1FA00570A13 /* ic_loading@3x.png */; };
 		8138A3DE1A36DA4600570A13 /* PFMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8138A3DD1A36DA4600570A13 /* PFMessageViewController.xib */; };
+		8161D99C1A42BA8D0062DB4B /* icon_share@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8161D99B1A42BA8D0062DB4B /* icon_share@3x.png */; };
 		816569931A402B8100507DDD /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 816569921A402B8100507DDD /* AsyncImageView.m */; };
 		818626211A2EBB2E00FFF347 /* PFApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8186253E1A2EBB2E00FFF347 /* PFApi.m */; };
 		818626221A2EBB2E00FFF347 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 818625421A2EBB2E00FFF347 /* AFHTTPRequestOperation.m */; };
@@ -352,6 +353,7 @@
 		8138A3D91A36B1FA00570A13 /* ic_loading@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_loading@2x.png"; sourceTree = "<group>"; };
 		8138A3DA1A36B1FA00570A13 /* ic_loading@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_loading@3x.png"; sourceTree = "<group>"; };
 		8138A3DD1A36DA4600570A13 /* PFMessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFMessageViewController.xib; sourceTree = "<group>"; };
+		8161D99B1A42BA8D0062DB4B /* icon_share@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_share@3x.png"; sourceTree = "<group>"; };
 		816569911A402B8100507DDD /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncImageView.h; sourceTree = "<group>"; };
 		816569921A402B8100507DDD /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncImageView.m; sourceTree = "<group>"; };
 		8186253D1A2EBB2E00FFF347 /* PFApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFApi.h; sourceTree = "<group>"; };
@@ -1189,6 +1191,7 @@
 				8186261D1A2EBB2E00FFF347 /* ic_notification@3x.png */,
 				8186261E1A2EBB2E00FFF347 /* ic_setting@2x.png */,
 				8186261F1A2EBB2E00FFF347 /* ic_setting@3x.png */,
+				8161D99B1A42BA8D0062DB4B /* icon_share@3x.png */,
 				818626201A2EBB2E00FFF347 /* icon_share@2x.png */,
 			);
 			path = ImagesTab;
@@ -2060,6 +2063,7 @@
 				818626711A2EBB2F00FFF347 /* th_contact_on.png in Resources */,
 				818627FE1A2EBB5400FFF347 /* PFAccountCell.xib in Resources */,
 				8186266D1A2EBB2F00FFF347 /* en_product_on.png in Resources */,
+				8161D99C1A42BA8D0062DB4B /* icon_share@3x.png in Resources */,
 				818628131A2EBB5400FFF347 /* PFAccountViewController.xib in Resources */,
 				818627B91A2EBB5400FFF347 /* ic_web@3x.png in Resources */,
 				8186266E1A2EBB2F00FFF347 /* en_update_off.png in Resources */,
