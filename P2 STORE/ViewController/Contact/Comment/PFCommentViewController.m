@@ -62,13 +62,13 @@
     } else {
 
         if (![[self.Api getLanguage] isEqualToString:@"TH"]) {
-            [[[UIAlertView alloc] initWithTitle:@"ทวียนต์!"
+            [[[UIAlertView alloc] initWithTitle:@"P2 STORE!"
                                         message:@"Please fill more than 10 characters."
                                        delegate:nil
                               cancelButtonTitle:@"OK"
                               otherButtonTitles:nil] show];
         } else {
-            [[[UIAlertView alloc] initWithTitle:@"ทวียนต์!"
+            [[[UIAlertView alloc] initWithTitle:@"P2 STORE!"
                                         message:@"กรุณากรอกมากกว่า 10 ตัวอักษร."
                                        delegate:nil
                               cancelButtonTitle:@"ตกลง"

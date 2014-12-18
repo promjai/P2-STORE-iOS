@@ -259,13 +259,13 @@ BOOL refreshDataFolder;
         if ([children_length isEqualToString:@"0"]) {
             
             if (![[self.Api getLanguage] isEqualToString:@"TH"]) {
-                [[[UIAlertView alloc] initWithTitle:@"ทวียนต์!"
+                [[[UIAlertView alloc] initWithTitle:@"P2 STORE!"
                                             message:@"Coming soon."
                                            delegate:nil
                                   cancelButtonTitle:@"OK"
                                   otherButtonTitles:nil] show];
             } else {
-                [[[UIAlertView alloc] initWithTitle:@"ทวียนต์!"
+                [[[UIAlertView alloc] initWithTitle:@"P2 STORE!"
                                             message:@"เร็วๆ นี้."
                                            delegate:nil
                                   cancelButtonTitle:@"ตกลง"

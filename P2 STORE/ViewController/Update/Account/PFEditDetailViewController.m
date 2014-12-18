@@ -204,13 +204,13 @@
     NSLog(@"changPassword %@",response);
     if ([[[response objectForKey:@"error"] objectForKey:@"type"] isEqualToString:@"Main\\CTL\\Exception\\NeedParameterException"] || [[[response objectForKey:@"error"] objectForKey:@"type"] isEqualToString:@"Main\\CTL\\Exception\\UnAuthorizedException"]) {
         if (![[self.Api getLanguage] isEqualToString:@"TH"]) {
-            [[[UIAlertView alloc] initWithTitle:@"ทวียนต์!"
+            [[[UIAlertView alloc] initWithTitle:@"P2 STORE!"
                                         message:[[response objectForKey:@"error"] objectForKey:@"message"]
                                        delegate:nil
                               cancelButtonTitle:@"OK"
                               otherButtonTitles:nil] show];
         } else {
-            [[[UIAlertView alloc] initWithTitle:@"ทวียนต์!"
+            [[[UIAlertView alloc] initWithTitle:@"P2 STORE!"
                                         message:[[response objectForKey:@"error"] objectForKey:@"message"]
                                        delegate:nil
                               cancelButtonTitle:@"ตกลง"
@@ -218,13 +218,13 @@
         }
     } else {
         if (![[self.Api getLanguage] isEqualToString:@"TH"]) {
-            [[[UIAlertView alloc] initWithTitle:@"ทวียนต์!"
+            [[[UIAlertView alloc] initWithTitle:@"P2 STORE!"
                                         message:@"Save complete."
                                        delegate:self
                               cancelButtonTitle:@"OK"
                               otherButtonTitles:nil] show];
         } else {
-            [[[UIAlertView alloc] initWithTitle:@"ทวียนต์!"
+            [[[UIAlertView alloc] initWithTitle:@"P2 STORE!"
                                         message:@"บันทึกเรียบร้อย"
                                        delegate:self
                               cancelButtonTitle:@"ตกลง"
@@ -249,13 +249,13 @@
                        birthday:[self.obj objectForKey:@"birth_date"]];
     
     if (![[self.Api getLanguage] isEqualToString:@"TH"]) {
-        [[[UIAlertView alloc] initWithTitle:@"ทวียนต์!"
+        [[[UIAlertView alloc] initWithTitle:@"P2 STORE!"
                                     message:@"Save complete."
                                    delegate:self
                           cancelButtonTitle:@"OK"
                           otherButtonTitles:nil] show];
     } else {
-        [[[UIAlertView alloc] initWithTitle:@"ทวียนต์!"
+        [[[UIAlertView alloc] initWithTitle:@"P2 STORE!"
                                     message:@"บันทึกเรียบร้อย"
                                    delegate:self
                           cancelButtonTitle:@"ตกลง"
@@ -266,13 +266,13 @@
 - (IBAction)passwordTapped:(id)sender{
     if (![self.newpassword.text isEqualToString:self.confirmpassword.text]) {
         if (![[self.Api getLanguage] isEqualToString:@"TH"]) {
-            [[[UIAlertView alloc] initWithTitle:@"ทวียนต์!"
+            [[[UIAlertView alloc] initWithTitle:@"P2 STORE!"
                                         message:@"You must enter the same password twice in order to confirm it."
                                        delegate:nil
                               cancelButtonTitle:@"OK"
                               otherButtonTitles:nil] show];
         } else {
-            [[[UIAlertView alloc] initWithTitle:@"ทวียนต์!"
+            [[[UIAlertView alloc] initWithTitle:@"P2 STORE!"
                                         message:@"ป้อนรหัสผ่านเดียวกันสองครั้งเพื่อยืนยัน"
                                        delegate:nil
                               cancelButtonTitle:@"OK"
@@ -295,13 +295,13 @@
                        birthday:[self.obj objectForKey:@"birth_date"]];
     
     if (![[self.Api getLanguage] isEqualToString:@"TH"]) {
-        [[[UIAlertView alloc] initWithTitle:@"ทวียนต์!"
+        [[[UIAlertView alloc] initWithTitle:@"P2 STORE!"
                                     message:@"Save complete."
                                    delegate:self
                           cancelButtonTitle:@"OK"
                           otherButtonTitles:nil] show];
     } else {
-        [[[UIAlertView alloc] initWithTitle:@"ทวียนต์!"
+        [[[UIAlertView alloc] initWithTitle:@"P2 STORE!"
                                     message:@"บันทึกเรียบร้อย"
                                    delegate:self
                           cancelButtonTitle:@"ตกลง"
@@ -321,13 +321,13 @@
                        birthday:[self.obj objectForKey:@"birth_date"]];
     
     if (![[self.Api getLanguage] isEqualToString:@"TH"]) {
-        [[[UIAlertView alloc] initWithTitle:@"ทวียนต์!"
+        [[[UIAlertView alloc] initWithTitle:@"P2 STORE!"
                                     message:@"Save complete."
                                    delegate:self
                           cancelButtonTitle:@"OK"
                           otherButtonTitles:nil] show];
     } else {
-        [[[UIAlertView alloc] initWithTitle:@"ทวียนต์!"
+        [[[UIAlertView alloc] initWithTitle:@"P2 STORE!"
                                     message:@"บันทึกเรียบร้อย"
                                    delegate:self
                           cancelButtonTitle:@"ตกลง"
@@ -347,13 +347,13 @@
                        birthday:[self.obj objectForKey:@"birth_date"]];
     
     if (![[self.Api getLanguage] isEqualToString:@"TH"]) {
-        [[[UIAlertView alloc] initWithTitle:@"ทวียนต์!"
+        [[[UIAlertView alloc] initWithTitle:@"P2 STORE!"
                                     message:@"Save complete."
                                    delegate:self
                           cancelButtonTitle:@"OK"
                           otherButtonTitles:nil] show];
     } else {
-        [[[UIAlertView alloc] initWithTitle:@"ทวียนต์!"
+        [[[UIAlertView alloc] initWithTitle:@"P2 STORE!"
                                     message:@"บันทึกเรียบร้อย"
                                    delegate:self
                           cancelButtonTitle:@"ตกลง"
@@ -388,13 +388,13 @@
                             birthday:[self.obj objectForKey:@"birth_date"]];
     
     if (![[self.Api getLanguage] isEqualToString:@"TH"]) {
-        [[[UIAlertView alloc] initWithTitle:@"ทวียนต์!"
+        [[[UIAlertView alloc] initWithTitle:@"P2 STORE!"
                                     message:@"Save complete."
                                    delegate:self
                           cancelButtonTitle:@"OK"
                           otherButtonTitles:nil] show];
     } else {
-        [[[UIAlertView alloc] initWithTitle:@"ทวียนต์!"
+        [[[UIAlertView alloc] initWithTitle:@"P2 STORE!"
                                     message:@"บันทึกเรียบร้อย"
                                    delegate:self
                           cancelButtonTitle:@"ตกลง"
@@ -424,13 +424,13 @@
                        birthday:dateSave];
     
     if (![[self.Api getLanguage] isEqualToString:@"TH"]) {
-        [[[UIAlertView alloc] initWithTitle:@"ทวียนต์!"
+        [[[UIAlertView alloc] initWithTitle:@"P2 STORE!"
                                     message:@"Save complete."
                                    delegate:self
                           cancelButtonTitle:@"OK"
                           otherButtonTitles:nil] show];
     } else {
-        [[[UIAlertView alloc] initWithTitle:@"ทวียนต์!"
+        [[[UIAlertView alloc] initWithTitle:@"P2 STORE!"
                                     message:@"บันทึกเรียบร้อย"
                                    delegate:self
                           cancelButtonTitle:@"ตกลง"
