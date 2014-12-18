@@ -570,22 +570,16 @@ NSTimer *timmer;
 
 - (void)PFPromotionDetailViewControllerBack {
     [self.delegate ShowTabbar];
-//    [self.promotiontableView reloadData];
-//    [self.catalogtableView reloadData];
     [self.tableView reloadData];
 }
 
 - (void)PFCatalogDetailViewControllerBack {
     [self.delegate ShowTabbar];
-//    [self.promotiontableView reloadData];
-//    [self.catalogtableView reloadData];
     [self.tableView reloadData];
 }
 
 - (void)PFDetailFoldertypeViewControllerBack {
     [self.delegate ShowTabbar];
-//    [self.promotiontableView reloadData];
-//    [self.catalogtableView reloadData];
     [self.tableView reloadData];
 }
 
