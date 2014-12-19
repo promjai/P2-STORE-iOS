@@ -406,7 +406,6 @@ NSTimer *timmer;
 - (IBAction)powerbyTapped:(id)sender{
     
     [self.NoInternetView removeFromSuperview];
-    
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://pla2fusion.com/"]];
 }
 
