@@ -320,7 +320,7 @@
 		818628461A2EBCD400FFF347 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 818628451A2EBCD400FFF347 /* MapKit.framework */; };
 		818628481A2EBCDB00FFF347 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 818628471A2EBCDB00FFF347 /* QuartzCore.framework */; };
 		8186284A1A2EBCE200FFF347 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 818628491A2EBCE200FFF347 /* UIKit.framework */; };
-		81CB70461A3FD7FF006422C6 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81CB70451A3FD7FF006422C6 /* FacebookSDK.framework */; };
+		81B4EB3A1A43D15500814FAB /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B4EB391A43D15500814FAB /* FacebookSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -763,8 +763,8 @@
 		818628451A2EBCD400FFF347 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		818628471A2EBCDB00FFF347 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		818628491A2EBCE200FFF347 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		81B4EB391A43D15500814FAB /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = FW/FacebookSDK.framework; sourceTree = "<group>"; };
 		81B7D2D31A30113300040EA6 /* P2 STORE-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "P2 STORE-Prefix.pch"; sourceTree = "<group>"; };
-		81CB70451A3FD7FF006422C6 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = FW/FacebookSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -773,7 +773,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8186284A1A2EBCE200FFF347 /* UIKit.framework in Frameworks */,
-				81CB70461A3FD7FF006422C6 /* FacebookSDK.framework in Frameworks */,
+				81B4EB3A1A43D15500814FAB /* FacebookSDK.framework in Frameworks */,
 				818628481A2EBCDB00FFF347 /* QuartzCore.framework in Frameworks */,
 				818628461A2EBCD400FFF347 /* MapKit.framework in Frameworks */,
 				818628441A2EBCCC00FFF347 /* ImageIO.framework in Frameworks */,
@@ -1850,7 +1850,7 @@
 		818628381A2EBC6E00FFF347 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				81CB70451A3FD7FF006422C6 /* FacebookSDK.framework */,
+				81B4EB391A43D15500814FAB /* FacebookSDK.framework */,
 				818628491A2EBCE200FFF347 /* UIKit.framework */,
 				818628471A2EBCDB00FFF347 /* QuartzCore.framework */,
 				818628451A2EBCD400FFF347 /* MapKit.framework */,
@@ -2326,7 +2326,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "03d79188-3391-496e-9003-00ae4fb6f0cb";
+				PROVISIONING_PROFILE = "0d39da2b-691c-442e-8897-b15fe1f59a71";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -2362,7 +2362,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "03d79188-3391-496e-9003-00ae4fb6f0cb";
+				PROVISIONING_PROFILE = "0d39da2b-691c-442e-8897-b15fe1f59a71";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -2417,6 +2417,8 @@
 					STORE/FW,
 					"$(PROJECT_DIR)/P2",
 					STORE/FW,
+					"$(PROJECT_DIR)/P2",
+					STORE/FW,
 				);
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2425,7 +2427,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "03d79188-3391-496e-9003-00ae4fb6f0cb";
+				PROVISIONING_PROFILE = "0d39da2b-691c-442e-8897-b15fe1f59a71";
 			};
 			name = Debug;
 		};
@@ -2478,6 +2480,8 @@
 					STORE/FW,
 					"$(PROJECT_DIR)/P2",
 					STORE/FW,
+					"$(PROJECT_DIR)/P2",
+					STORE/FW,
 				);
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2486,7 +2490,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "03d79188-3391-496e-9003-00ae4fb6f0cb";
+				PROVISIONING_PROFILE = "0d39da2b-691c-442e-8897-b15fe1f59a71";
 			};
 			name = Release;
 		};

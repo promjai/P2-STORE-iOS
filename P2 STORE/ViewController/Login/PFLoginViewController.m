@@ -397,7 +397,7 @@ NSString *password;
     }
 }
 
-- (void) alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
     if (buttonIndex == 1) {
         self.genderRegisTextField.text = @"male";
     } else if (buttonIndex == 2) {
