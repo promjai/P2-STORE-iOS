@@ -14,6 +14,7 @@
 		812236581A3E9087005EE0C2 /* pin_map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 812236561A3E9087005EE0C2 /* pin_map@2x.png */; };
 		812236591A3E9087005EE0C2 /* pin_map@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 812236571A3E9087005EE0C2 /* pin_map@3x.png */; };
 		8122365B1A3E9654005EE0C2 /* PFProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8122365A1A3E9654005EE0C2 /* PFProductViewController.xib */; };
+		8124AC2A1A456D870051CCAC /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8124AC291A456D870051CCAC /* FacebookSDK.framework */; };
 		813663191A2EB6B000EEB43D /* TabBarItemButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 813663161A2EB6B000EEB43D /* TabBarItemButton.m */; };
 		8136631A1A2EB6B000EEB43D /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 813663181A2EB6B000EEB43D /* TabBarViewController.m */; };
 		8138A3DB1A36B1FA00570A13 /* ic_loading@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8138A3D91A36B1FA00570A13 /* ic_loading@2x.png */; };
@@ -320,7 +321,6 @@
 		818628461A2EBCD400FFF347 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 818628451A2EBCD400FFF347 /* MapKit.framework */; };
 		818628481A2EBCDB00FFF347 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 818628471A2EBCDB00FFF347 /* QuartzCore.framework */; };
 		8186284A1A2EBCE200FFF347 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 818628491A2EBCE200FFF347 /* UIKit.framework */; };
-		81B4EB3A1A43D15500814FAB /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B4EB391A43D15500814FAB /* FacebookSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -346,6 +346,7 @@
 		812236561A3E9087005EE0C2 /* pin_map@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pin_map@2x.png"; sourceTree = "<group>"; };
 		812236571A3E9087005EE0C2 /* pin_map@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pin_map@3x.png"; sourceTree = "<group>"; };
 		8122365A1A3E9654005EE0C2 /* PFProductViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFProductViewController.xib; sourceTree = "<group>"; };
+		8124AC291A456D870051CCAC /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = FW/FacebookSDK.framework; sourceTree = "<group>"; };
 		813663151A2EB6B000EEB43D /* TabBarItemButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarItemButton.h; sourceTree = "<group>"; };
 		813663161A2EB6B000EEB43D /* TabBarItemButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarItemButton.m; sourceTree = "<group>"; };
 		813663171A2EB6B000EEB43D /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
@@ -763,7 +764,6 @@
 		818628451A2EBCD400FFF347 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		818628471A2EBCDB00FFF347 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		818628491A2EBCE200FFF347 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		81B4EB391A43D15500814FAB /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = FW/FacebookSDK.framework; sourceTree = "<group>"; };
 		81B7D2D31A30113300040EA6 /* P2 STORE-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "P2 STORE-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -773,7 +773,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8186284A1A2EBCE200FFF347 /* UIKit.framework in Frameworks */,
-				81B4EB3A1A43D15500814FAB /* FacebookSDK.framework in Frameworks */,
+				8124AC2A1A456D870051CCAC /* FacebookSDK.framework in Frameworks */,
 				818628481A2EBCDB00FFF347 /* QuartzCore.framework in Frameworks */,
 				818628461A2EBCD400FFF347 /* MapKit.framework in Frameworks */,
 				818628441A2EBCCC00FFF347 /* ImageIO.framework in Frameworks */,
@@ -1850,7 +1850,7 @@
 		818628381A2EBC6E00FFF347 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				81B4EB391A43D15500814FAB /* FacebookSDK.framework */,
+				8124AC291A456D870051CCAC /* FacebookSDK.framework */,
 				818628491A2EBCE200FFF347 /* UIKit.framework */,
 				818628471A2EBCDB00FFF347 /* QuartzCore.framework */,
 				818628451A2EBCD400FFF347 /* MapKit.framework */,
@@ -2305,8 +2305,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Platwofusion Co.,Ltd. (Q246MJM9JV)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Platwofusion Co.,Ltd. (Q246MJM9JV)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -2326,7 +2326,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "0d39da2b-691c-442e-8897-b15fe1f59a71";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -2348,8 +2348,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Platwofusion Co.,Ltd. (Q246MJM9JV)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Platwofusion Co.,Ltd. (Q246MJM9JV)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -2362,7 +2362,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "0d39da2b-691c-442e-8897-b15fe1f59a71";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -2373,10 +2373,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Platwofusion Co.,Ltd. (Q246MJM9JV)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Platwofusion Co.,Ltd. (Q246MJM9JV)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Phee Puthaprasert (Q8MZLL79Y4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Phee Puthaprasert (Q8MZLL79Y4)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/P2",
+					STORE/FW,
 					"$(PROJECT_DIR)/P2",
 					STORE/FW,
 					"$(PROJECT_DIR)/P2",
@@ -2427,7 +2429,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0d39da2b-691c-442e-8897-b15fe1f59a71";
+				PROVISIONING_PROFILE = "1f125cd9-6002-4eea-9fcb-be7223c2d08b";
 			};
 			name = Debug;
 		};
@@ -2436,10 +2438,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Platwofusion Co.,Ltd. (Q246MJM9JV)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Platwofusion Co.,Ltd. (Q246MJM9JV)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Phee Puthaprasert (Q8MZLL79Y4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Phee Puthaprasert (Q8MZLL79Y4)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/P2",
+					STORE/FW,
 					"$(PROJECT_DIR)/P2",
 					STORE/FW,
 					"$(PROJECT_DIR)/P2",
@@ -2490,7 +2494,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0d39da2b-691c-442e-8897-b15fe1f59a71";
+				PROVISIONING_PROFILE = "1f125cd9-6002-4eea-9fcb-be7223c2d08b";
 			};
 			name = Release;
 		};
