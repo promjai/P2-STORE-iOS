@@ -135,17 +135,19 @@ NSTimer *timmer;
         UIButton *toggleKeyboardButton = [UIButton buttonWithType:UIButtonTypeCustom];
         toggleKeyboardButton.bounds = CGRectMake( 0, 0, 21, 21 );
         [toggleKeyboardButton setTitle:badge forState:UIControlStateNormal];
+        [toggleKeyboardButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         [toggleKeyboardButton.titleLabel setFont:[UIFont systemFontOfSize:12]];
         
         [toggleKeyboardButton.titleLabel setTextAlignment:NSTextAlignmentCenter];
         toggleKeyboardButton.contentVerticalAlignment = UIControlContentHorizontalAlignmentCenter;
         
         [toggleKeyboardButton setBackgroundColor:[UIColor clearColor]];
-        [toggleKeyboardButton.layer setBorderColor:[[UIColor whiteColor] CGColor]];
+        [toggleKeyboardButton.layer setBorderColor:[[UIColor redColor] CGColor]];
         [toggleKeyboardButton.layer setBorderWidth: 1.0];
         [toggleKeyboardButton.layer setCornerRadius:10.0f];
         [toggleKeyboardButton addTarget:self action:@selector(notify) forControlEvents:UIControlEventTouchUpInside];
         UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithCustomView:toggleKeyboardButton];
+        [[UIBarButtonItem appearance] setTintColor:[UIColor redColor]];
         self.navItem.rightBarButtonItem = rightButton;
         
     }
