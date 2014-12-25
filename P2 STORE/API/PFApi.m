@@ -301,6 +301,18 @@
 
 }
 
+- (void)deleteNotification:(NSString *)notify_id {
+    
+    self.urlStr = [[NSString alloc] initWithFormat:@"%@user/notify/%@",API_URL,notify_id];
+    
+    [self.manager DELETE:self.urlStr parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [self.delegate PFApi:self deleteNotificationResponse:responseObject];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [self.delegate PFApi:self deleteNotificationErrorResponse:[error localizedDescription]];
+    }];
+
+}
+
 - (void)checkBadge {
     
     if ([[self.userDefaults objectForKey:@"access_token"] length] != 0) {

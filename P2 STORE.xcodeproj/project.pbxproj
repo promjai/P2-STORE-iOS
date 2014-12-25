@@ -14,10 +14,10 @@
 		812236581A3E9087005EE0C2 /* pin_map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 812236561A3E9087005EE0C2 /* pin_map@2x.png */; };
 		812236591A3E9087005EE0C2 /* pin_map@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 812236571A3E9087005EE0C2 /* pin_map@3x.png */; };
 		8122365B1A3E9654005EE0C2 /* PFProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8122365A1A3E9654005EE0C2 /* PFProductViewController.xib */; };
-		81233BE51A4AA4EC00146B44 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81233BE41A4AA4EC00146B44 /* FacebookSDK.framework */; };
 		813663191A2EB6B000EEB43D /* TabBarItemButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 813663161A2EB6B000EEB43D /* TabBarItemButton.m */; };
 		8136631A1A2EB6B000EEB43D /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 813663181A2EB6B000EEB43D /* TabBarViewController.m */; };
 		8138A3DE1A36DA4600570A13 /* PFMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8138A3DD1A36DA4600570A13 /* PFMessageViewController.xib */; };
+		813984761A4BEE27007A76F5 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 813984751A4BEE27007A76F5 /* FacebookSDK.framework */; };
 		8161D99C1A42BA8D0062DB4B /* icon_share@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8161D99B1A42BA8D0062DB4B /* icon_share@3x.png */; };
 		816569931A402B8100507DDD /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 816569921A402B8100507DDD /* AsyncImageView.m */; };
 		818626211A2EBB2E00FFF347 /* PFApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 8186253E1A2EBB2E00FFF347 /* PFApi.m */; };
@@ -344,12 +344,12 @@
 		812236561A3E9087005EE0C2 /* pin_map@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pin_map@2x.png"; sourceTree = "<group>"; };
 		812236571A3E9087005EE0C2 /* pin_map@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pin_map@3x.png"; sourceTree = "<group>"; };
 		8122365A1A3E9654005EE0C2 /* PFProductViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFProductViewController.xib; sourceTree = "<group>"; };
-		81233BE41A4AA4EC00146B44 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = FW/FacebookSDK.framework; sourceTree = "<group>"; };
 		813663151A2EB6B000EEB43D /* TabBarItemButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarItemButton.h; sourceTree = "<group>"; };
 		813663161A2EB6B000EEB43D /* TabBarItemButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarItemButton.m; sourceTree = "<group>"; };
 		813663171A2EB6B000EEB43D /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
 		813663181A2EB6B000EEB43D /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
 		8138A3DD1A36DA4600570A13 /* PFMessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFMessageViewController.xib; sourceTree = "<group>"; };
+		813984751A4BEE27007A76F5 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = FW/FacebookSDK.framework; sourceTree = "<group>"; };
 		8161D99B1A42BA8D0062DB4B /* icon_share@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_share@3x.png"; sourceTree = "<group>"; };
 		816569911A402B8100507DDD /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncImageView.h; sourceTree = "<group>"; };
 		816569921A402B8100507DDD /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncImageView.m; sourceTree = "<group>"; };
@@ -769,7 +769,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8186284A1A2EBCE200FFF347 /* UIKit.framework in Frameworks */,
-				81233BE51A4AA4EC00146B44 /* FacebookSDK.framework in Frameworks */,
+				813984761A4BEE27007A76F5 /* FacebookSDK.framework in Frameworks */,
 				818628481A2EBCDB00FFF347 /* QuartzCore.framework in Frameworks */,
 				818628461A2EBCD400FFF347 /* MapKit.framework in Frameworks */,
 				818628441A2EBCCC00FFF347 /* ImageIO.framework in Frameworks */,
@@ -1844,7 +1844,7 @@
 		818628381A2EBC6E00FFF347 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				81233BE41A4AA4EC00146B44 /* FacebookSDK.framework */,
+				813984751A4BEE27007A76F5 /* FacebookSDK.framework */,
 				818628491A2EBCE200FFF347 /* UIKit.framework */,
 				818628471A2EBCDB00FFF347 /* QuartzCore.framework */,
 				818628451A2EBCD400FFF347 /* MapKit.framework */,
@@ -2429,6 +2429,8 @@
 					STORE/FW,
 					"$(PROJECT_DIR)/P2",
 					STORE/FW,
+					"$(PROJECT_DIR)/P2",
+					STORE/FW,
 				);
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2450,6 +2452,8 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Phee Puthaprasert (Q8MZLL79Y4)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/P2",
+					STORE/FW,
 					"$(PROJECT_DIR)/P2",
 					STORE/FW,
 					"$(PROJECT_DIR)/P2",
