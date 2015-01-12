@@ -45,7 +45,7 @@ NSString *removeBreckets;
         self.languageLabel.text = @"Language setting";
         self.applanguageLabel.text = @"App Language";
         self.appstatuslanguageLabel.text = @"EN";
-        [self.logoutButton setTitle:@"Logout" forState:UIControlStateNormal];
+        [self.logoutButton setTitle:@"Log Out" forState:UIControlStateNormal];
     } else {
         self.navigationItem.title = @"ตั้งค่า";
         self.notificationLabel.text = @"ตั้งค่าการแจ้งเตือน";
